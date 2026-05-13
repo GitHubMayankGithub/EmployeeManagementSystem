@@ -82,7 +82,9 @@ Inherits="EmployeeManagementSystem.Employees.List" %>
 
 </body>
 
-</html>--%><%@ Page Language="C#" AutoEventWireup="true"
+</html>--%>
+
+<%--<%@ Page Language="C#" AutoEventWireup="true"
 MasterPageFile="~/Site.Master"
 CodeBehind="List.aspx.cs"
 Inherits="EmployeeManagementSystem.Employees.List" %>
@@ -116,11 +118,7 @@ Inherits="EmployeeManagementSystem.Employees.List" %>
 
 </p>
 
-<%--    <p>
-        <a href="Create.aspx">
-            Add New Employee
-        </a>
-    </p>--%>
+
 
     <asp:GridView
         ID="gvEmployees"
@@ -173,5 +171,145 @@ Inherits="EmployeeManagementSystem.Employees.List" %>
         </Columns>
 
     </asp:GridView>
+
+</asp:Content>--%>
+
+<%@ Page Language="C#" AutoEventWireup="true"
+MasterPageFile="~/Site.Master"
+CodeBehind="List.aspx.cs"
+Inherits="EmployeeManagementSystem.Employees.List" %>
+
+<asp:Content
+    ID="Content1"
+    ContentPlaceHolderID="MainContent"
+    runat="server">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-12">
+
+                <div class="panel panel-primary">
+
+                    <div class="panel-heading">
+
+                        <h3 class="panel-title">
+                            Employees List
+                        </h3>
+
+                    </div>
+
+                    <div class="panel-body">
+
+                        <div class="row"
+                             style="margin-bottom:20px;">
+
+                            <div class="col-md-4">
+
+                                <asp:TextBox
+                                    ID="txtSkillSearch"
+                                    runat="server"
+                                    CssClass="form-control"
+                                    placeholder="Search by skill">
+                                </asp:TextBox>
+
+                            </div>
+
+                            <div class="col-md-4">
+
+                                <asp:Button
+                                    ID="btnSearch"
+                                    runat="server"
+                                    Text="Search"
+                                    CssClass="btn btn-primary"
+                                    OnClick="btnSearch_Click" />
+
+                                <asp:Button
+                                    ID="btnReset"
+                                    runat="server"
+                                    Text="Reset"
+                                    CssClass="btn btn-default"
+                                    OnClick="btnReset_Click" />
+
+                            </div>
+
+                            <div class="col-md-4 text-right">
+
+                                <a href="Create.aspx"
+                                   class="btn btn-success">
+
+                                    Add Employee
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                        <asp:GridView
+                            ID="gvEmployees"
+                            runat="server"
+                            AutoGenerateColumns="false"
+                            CssClass="table table-bordered table-hover table-striped">
+
+                            <Columns>
+
+                                <asp:BoundField
+                                    DataField="EmployeeCode"
+                                    HeaderText="Code" />
+
+                                <asp:BoundField
+                                    DataField="FirstName"
+                                    HeaderText="First Name" />
+
+                                <asp:BoundField
+                                    DataField="LastName"
+                                    HeaderText="Last Name" />
+
+                                <asp:BoundField
+                                    DataField="Email"
+                                    HeaderText="Email" />
+
+                                <asp:BoundField
+                                    DataField="Skills"
+                                    HeaderText="Skills" />
+
+                                <asp:TemplateField
+                                    HeaderText="Actions">
+
+                                    <ItemTemplate>
+
+                                        <a href='Edit.aspx?id=<%# Eval("EmployeeId") %>'
+                                           class="btn btn-warning btn-sm">
+
+                                            Edit
+
+                                        </a>
+
+                                        <a href='Delete.aspx?id=<%# Eval("EmployeeId") %>'
+                                           class="btn btn-danger btn-sm">
+
+                                            Delete
+
+                                        </a>
+
+                                    </ItemTemplate>
+
+                                </asp:TemplateField>
+
+                            </Columns>
+
+                        </asp:GridView>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </asp:Content>
