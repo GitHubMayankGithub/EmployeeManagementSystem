@@ -1,111 +1,137 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true"
+MasterPageFile="~/Site.Master"
 CodeBehind="Edit.aspx.cs"
 Inherits="EmployeeManagementSystem.Employees.Edit" %>
 
-<!DOCTYPE html>
+<asp:Content
+    ID="Content1"
+    ContentPlaceHolderID="MainContent"
+    runat="server">
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+    <div class="container">
 
-<head runat="server">
-    <title>Edit Employee</title>
-</head>
+        <div class="row">
 
-<body>
+            <div class="col-md-8 col-md-offset-2">
 
-    <form id="form1" runat="server">
+                <div class="panel panel-warning">
 
-        <div>
+                    <div class="panel-heading">
 
-            <h2>Edit Employee</h2>
+                        <h3 class="panel-title">
+                            Edit Employee
+                        </h3>
 
-            <table>
+                    </div>
 
-                <tr>
-                    <td>Employee Code</td>
+                    <div class="panel-body">
 
-                    <td>
-                        <asp:TextBox
-                            ID="txtEmployeeCode"
-                            runat="server">
-                        </asp:TextBox>
-                    </td>
-                </tr>
+                        <div class="form-group">
 
-                <tr>
-                    <td>First Name</td>
+                            <label>
+                                Employee Code
+                            </label>
 
-                    <td>
-                        <asp:TextBox
-                            ID="txtFirstName"
-                            runat="server">
-                        </asp:TextBox>
-                    </td>
-                </tr>
+                            <asp:TextBox
+                                ID="txtEmployeeCode"
+                                runat="server"
+                                CssClass="form-control">
+                            </asp:TextBox>
 
-                <tr>
-                    <td>Last Name</td>
+                        </div>
 
-                    <td>
-                        <asp:TextBox
-                            ID="txtLastName"
-                            runat="server">
-                        </asp:TextBox>
-                    </td>
-                </tr>
+                        <div class="form-group">
 
-                <tr>
-                    <td>Email</td>
+                            <label>
+                                First Name
+                            </label>
 
-                    <td>
-                        <asp:TextBox
-                            ID="txtEmail"
-                            runat="server">
-                        </asp:TextBox>
-                    </td>
-                </tr>
+                            <asp:TextBox
+                                ID="txtFirstName"
+                                runat="server"
+                                CssClass="form-control">
+                            </asp:TextBox>
 
-                <tr>
-                    <td>Skills</td>
+                        </div>
 
-                    <td>
+                        <div class="form-group">
 
-                        <asp:CheckBoxList
-                            ID="cblSkills"
-                            runat="server">
-                        </asp:CheckBoxList>
+                            <label>
+                                Last Name
+                            </label>
 
-                    </td>
-                </tr>
+                            <asp:TextBox
+                                ID="txtLastName"
+                                runat="server"
+                                CssClass="form-control">
+                            </asp:TextBox>
 
-                <tr>
-                    <td colspan="2">
+                        </div>
 
-                        <asp:Button
-                            ID="btnUpdate"
-                            runat="server"
-                            Text="Update Employee"
-                            OnClick="btnUpdate_Click" />
+                        <div class="form-group">
 
-                    </td>
-                </tr>
+                            <label>
+                                Email
+                            </label>
 
-                <tr>
-                    <td colspan="2">
+                            <asp:TextBox
+                                ID="txtEmail"
+                                runat="server"
+                                CssClass="form-control">
+                            </asp:TextBox>
 
-                        <asp:Label
-                            ID="lblMessage"
-                            runat="server">
-                        </asp:Label>
+                        </div>
 
-                    </td>
-                </tr>
+                        <div class="form-group">
 
-            </table>
+                            <label>
+                                Skills
+                            </label>
+
+                            <asp:CheckBoxList
+                                ID="cblSkills"
+                                runat="server"
+                                CssClass="checkbox">
+                            </asp:CheckBoxList>
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <asp:Button
+                                ID="btnUpdate"
+                                runat="server"
+                                Text="Update Employee"
+                                CssClass="btn btn-warning"
+                                OnClick="btnUpdate_Click" />
+
+                            <a href="List.aspx"
+                               class="btn btn-default">
+
+                                Back To List
+
+                            </a>
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <asp:Label
+                                ID="lblMessage"
+                                runat="server"
+                                CssClass="text-danger">
+                            </asp:Label>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
 
         </div>
 
-    </form>
+    </div>
 
-</body>
-
-</html>
+</asp:Content>
