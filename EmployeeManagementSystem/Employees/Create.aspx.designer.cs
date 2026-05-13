@@ -15,6 +15,15 @@ namespace EmployeeManagementSystem.Employees
     {
 
         /// <summary>
+        /// vsEmployee control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ValidationSummary vsEmployee;
+
+        /// <summary>
         /// txtEmployeeCode control.
         /// </summary>
         /// <remarks>
@@ -22,6 +31,15 @@ namespace EmployeeManagementSystem.Employees
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtEmployeeCode;
+
+        /// <summary>
+        /// rfvEmployeeCode control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvEmployeeCode;
 
         /// <summary>
         /// txtFirstName control.
@@ -33,6 +51,15 @@ namespace EmployeeManagementSystem.Employees
         protected global::System.Web.UI.WebControls.TextBox txtFirstName;
 
         /// <summary>
+        /// rfvFirstName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvFirstName;
+
+        /// <summary>
         /// txtLastName control.
         /// </summary>
         /// <remarks>
@@ -42,6 +69,15 @@ namespace EmployeeManagementSystem.Employees
         protected global::System.Web.UI.WebControls.TextBox txtLastName;
 
         /// <summary>
+        /// rfvLastName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvLastName;
+
+        /// <summary>
         /// txtEmail control.
         /// </summary>
         /// <remarks>
@@ -49,6 +85,24 @@ namespace EmployeeManagementSystem.Employees
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtEmail;
+
+        /// <summary>
+        /// rfvEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvEmail;
+
+        /// <summary>
+        /// revEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revEmail;
 
         /// <summary>
         /// cblSkills control.

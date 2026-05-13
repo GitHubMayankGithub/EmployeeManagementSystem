@@ -26,6 +26,13 @@ Inherits="EmployeeManagementSystem.Employees.Create" %>
 
                     <div class="panel-body">
 
+                        <asp:ValidationSummary
+                            ID="vsEmployee"
+                            runat="server"
+                            ForeColor="Red"
+                            HeaderText="Please fix the following errors:"
+                            CssClass="alert alert-danger" />
+
                         <div class="form-group">
 
                             <label>
@@ -37,6 +44,15 @@ Inherits="EmployeeManagementSystem.Employees.Create" %>
                                 runat="server"
                                 CssClass="form-control">
                             </asp:TextBox>
+
+                            <asp:RequiredFieldValidator
+                                ID="rfvEmployeeCode"
+                                runat="server"
+                                ControlToValidate="txtEmployeeCode"
+                                ErrorMessage="Employee Code is required"
+                                ForeColor="Red"
+                                Display="Dynamic">
+                            </asp:RequiredFieldValidator>
 
                         </div>
 
@@ -52,6 +68,15 @@ Inherits="EmployeeManagementSystem.Employees.Create" %>
                                 CssClass="form-control">
                             </asp:TextBox>
 
+                            <asp:RequiredFieldValidator
+                                ID="rfvFirstName"
+                                runat="server"
+                                ControlToValidate="txtFirstName"
+                                ErrorMessage="First Name is required"
+                                ForeColor="Red"
+                                Display="Dynamic">
+                            </asp:RequiredFieldValidator>
+
                         </div>
 
                         <div class="form-group">
@@ -65,6 +90,15 @@ Inherits="EmployeeManagementSystem.Employees.Create" %>
                                 runat="server"
                                 CssClass="form-control">
                             </asp:TextBox>
+
+                            <asp:RequiredFieldValidator
+                                ID="rfvLastName"
+                                runat="server"
+                                ControlToValidate="txtLastName"
+                                ErrorMessage="Last Name is required"
+                                ForeColor="Red"
+                                Display="Dynamic">
+                            </asp:RequiredFieldValidator>
 
                         </div>
 
@@ -80,6 +114,27 @@ Inherits="EmployeeManagementSystem.Employees.Create" %>
                                 CssClass="form-control">
                             </asp:TextBox>
 
+                            <asp:RequiredFieldValidator
+                                ID="rfvEmail"
+                                runat="server"
+                                ControlToValidate="txtEmail"
+                                ErrorMessage="Email is required"
+                                ForeColor="Red"
+                                Display="Dynamic">
+                            </asp:RequiredFieldValidator>
+
+                            <br />
+
+                            <asp:RegularExpressionValidator
+                                ID="revEmail"
+                                runat="server"
+                                ControlToValidate="txtEmail"
+                                ErrorMessage="Invalid Email Format"
+                                ValidationExpression="\w+([-.+']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"
+                                ForeColor="Red"
+                                Display="Dynamic">
+                            </asp:RegularExpressionValidator>
+
                         </div>
 
                         <div class="form-group">
@@ -88,11 +143,6 @@ Inherits="EmployeeManagementSystem.Employees.Create" %>
                                 Skills
                             </label>
 
-                      <%--      <asp:CheckBoxList
-                                ID="cblSkills"
-                                runat="server"
-                                CssClass="checkbox">
-                            </asp:CheckBoxList>--%>
                             <div style="
                                 border:1px solid #ddd;
                                 padding:15px;
