@@ -88,11 +88,27 @@ Inherits="EmployeeManagementSystem.Employees.Create" %>
                                 Skills
                             </label>
 
-                            <asp:CheckBoxList
+                      <%--      <asp:CheckBoxList
                                 ID="cblSkills"
                                 runat="server"
                                 CssClass="checkbox">
-                            </asp:CheckBoxList>
+                            </asp:CheckBoxList>--%>
+                            <div style="
+                                border:1px solid #ddd;
+                                padding:15px;
+                                border-radius:6px;
+                                background-color:#f9f9f9;">
+
+                                <asp:CheckBoxList
+                                    ID="cblSkills"
+                                    runat="server"
+                                    RepeatColumns="3"
+                                    RepeatDirection="Horizontal"
+                                    CellPadding="10"
+                                    CssClass="skill-checkbox-list">
+                                </asp:CheckBoxList>
+
+                            </div>
 
                         </div>
 
