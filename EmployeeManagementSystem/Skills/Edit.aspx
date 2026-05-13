@@ -1,67 +1,82 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true"
+MasterPageFile="~/Site.Master"
 CodeBehind="Edit.aspx.cs"
 Inherits="EmployeeManagementSystem.Skills.Edit" %>
 
-<!DOCTYPE html>
+<asp:Content
+    ID="Content1"
+    ContentPlaceHolderID="MainContent"
+    runat="server">
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+    <div class="container">
 
-<head runat="server">
-    <title>Edit Skill</title>
-</head>
+        <div class="row">
 
-<body>
+            <div class="col-md-6 col-md-offset-3">
 
-    <form id="form1" runat="server">
+                <div class="panel panel-warning">
 
-        <div>
+                    <div class="panel-heading">
 
-            <h2>Edit Skill</h2>
+                        <h3 class="panel-title">
+                            Edit Skill
+                        </h3>
 
-            <table>
+                    </div>
 
-                <tr>
-                    <td>Skill Name</td>
+                    <div class="panel-body">
 
-                    <td>
+                        <div class="form-group">
 
-                        <asp:TextBox
-                            ID="txtSkillName"
-                            runat="server">
-                        </asp:TextBox>
+                            <label>
+                                Skill Name
+                            </label>
 
-                    </td>
-                </tr>
+                            <asp:TextBox
+                                ID="txtSkillName"
+                                runat="server"
+                                CssClass="form-control"
+                                placeholder="Enter skill name">
+                            </asp:TextBox>
 
-                <tr>
-                    <td colspan="2">
+                        </div>
 
-                        <asp:Button
-                            ID="btnUpdate"
-                            runat="server"
-                            Text="Update Skill"
-                            OnClick="btnUpdate_Click" />
+                        <div class="form-group">
 
-                    </td>
-                </tr>
+                            <asp:Button
+                                ID="btnUpdate"
+                                runat="server"
+                                Text="Update Skill"
+                                CssClass="btn btn-warning"
+                                OnClick="btnUpdate_Click" />
 
-                <tr>
-                    <td colspan="2">
+                            <a href="List.aspx"
+                               class="btn btn-default">
 
-                        <asp:Label
-                            ID="lblMessage"
-                            runat="server">
-                        </asp:Label>
+                                Back To List
 
-                    </td>
-                </tr>
+                            </a>
 
-            </table>
+                        </div>
+
+                        <div class="form-group">
+
+                            <asp:Label
+                                ID="lblMessage"
+                                runat="server"
+                                CssClass="text-danger">
+                            </asp:Label>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
 
         </div>
 
-    </form>
+    </div>
 
-</body>
-
-</html>
+</asp:Content>

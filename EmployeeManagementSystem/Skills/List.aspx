@@ -1,70 +1,93 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true"
+MasterPageFile="~/Site.Master"
 CodeBehind="List.aspx.cs"
 Inherits="EmployeeManagementSystem.Skills.List" %>
 
-<!DOCTYPE html>
+<asp:Content
+    ID="Content1"
+    ContentPlaceHolderID="MainContent"
+    runat="server">
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+    <div class="container">
 
-<head runat="server">
-    <title>Skills List</title>
-</head>
+        <div class="row">
 
-<body>
+            <div class="col-md-10 col-md-offset-1">
 
-    <form id="form1" runat="server">
+                <div class="panel panel-info">
 
-        <div>
+                    <div class="panel-heading">
 
-            <h2>Skills List</h2>
+                        <h3 class="panel-title">
+                            Skills List
+                        </h3>
 
-            <p>
-                <a href="Create.aspx">Add New Skill</a>
-            </p>
+                    </div>
 
-            <asp:GridView
-                ID="gvSkills"
-                runat="server"
-                AutoGenerateColumns="false"
-                CellPadding="5"
-                BorderWidth="1">
+                    <div class="panel-body">
 
-       <Columns>
+                        <div style="margin-bottom:20px;">
 
-    <asp:BoundField
-        DataField="SkillId"
-        HeaderText="ID" />
+                            <a href="Create.aspx"
+                               class="btn btn-success">
 
-    <asp:BoundField
-        DataField="SkillName"
-        HeaderText="Skill Name" />
+                                Add New Skill
 
-    <asp:TemplateField HeaderText="Actions">
+                            </a>
 
-        <ItemTemplate>
+                        </div>
 
-            <a href='Edit.aspx?id=<%# Eval("SkillId") %>'>
-                Edit
-            </a>
+                        <asp:GridView
+                            ID="gvSkills"
+                            runat="server"
+                            AutoGenerateColumns="false"
+                            CssClass="table table-bordered table-hover table-striped">
 
-            |
+                            <Columns>
 
-            <a href='Delete.aspx?id=<%# Eval("SkillId") %>'>
-                Delete
-            </a>
+                                <asp:BoundField
+                                    DataField="SkillId"
+                                    HeaderText="Skill ID" />
 
-        </ItemTemplate>
+                                <asp:BoundField
+                                    DataField="SkillName"
+                                    HeaderText="Skill Name" />
 
-    </asp:TemplateField>
+                                <asp:TemplateField
+                                    HeaderText="Actions">
 
-</Columns>
+                                    <ItemTemplate>
 
-            </asp:GridView>
+                                        <a href='Edit.aspx?id=<%# Eval("SkillId") %>'
+                                           class="btn btn-warning btn-sm">
+
+                                            Edit
+
+                                        </a>
+
+                                        <a href='Delete.aspx?id=<%# Eval("SkillId") %>'
+                                           class="btn btn-danger btn-sm">
+
+                                            Delete
+
+                                        </a>
+
+                                    </ItemTemplate>
+
+                                </asp:TemplateField>
+
+                            </Columns>
+
+                        </asp:GridView>
+
+                    </div>
+
+                </div>
+
+            </div>
 
         </div>
 
-    </form>
+    </div>
 
-</body>
-
-</html>
+</asp:Content>

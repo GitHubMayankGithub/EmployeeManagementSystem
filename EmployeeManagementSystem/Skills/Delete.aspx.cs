@@ -27,7 +27,7 @@ namespace EmployeeManagementSystem.Skills
 
             if (skill != null)
             {
-                lblSkillName.Text = skill.SkillName;
+                lblSkill.Text = skill.SkillName;
             }
         }
 
@@ -42,7 +42,7 @@ namespace EmployeeManagementSystem.Skills
 
                 if (isSkillUsed)
                 {
-                    lblSkillName.Text =
+                    lblSkill.Text =
                         "Cannot delete. Skill is assigned to employees.";
 
                     return;

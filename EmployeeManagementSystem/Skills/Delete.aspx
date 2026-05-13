@@ -1,51 +1,74 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true"
+MasterPageFile="~/Site.Master"
 CodeBehind="Delete.aspx.cs"
 Inherits="EmployeeManagementSystem.Skills.Delete" %>
 
-<!DOCTYPE html>
+<asp:Content
+    ID="Content1"
+    ContentPlaceHolderID="MainContent"
+    runat="server">
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+    <div class="container">
 
-<head runat="server">
-    <title>Delete Skill</title>
-</head>
+        <div class="row">
 
-<body>
+            <div class="col-md-6 col-md-offset-3">
 
-    <form id="form1" runat="server">
+                <div class="panel panel-danger">
 
-        <div>
+                    <div class="panel-heading">
 
-            <h2>Delete Skill</h2>
+                        <h3 class="panel-title">
+                            Delete Skill
+                        </h3>
 
-            <p>
-                Are you sure you want to delete this skill?
-            </p>
+                    </div>
 
-            <p>
+                    <div class="panel-body">
 
-                <asp:Label
-                    ID="lblSkillName"
-                    runat="server"
-                    Font-Bold="true">
-                </asp:Label>
+                        <div class="alert alert-danger">
 
-            </p>
+                            <strong>
+                                Warning!
+                            </strong>
 
-            <asp:Button
-                ID="btnDelete"
-                runat="server"
-                Text="Delete"
-                OnClick="btnDelete_Click" />
+                            Are you sure you want to delete this skill?
 
-            &nbsp;
+                        </div>
 
-            <a href="List.aspx">Cancel</a>
+                        <h4>
+
+                            <asp:Label
+                                ID="lblSkill"
+                                runat="server">
+                            </asp:Label>
+
+                        </h4>
+
+                        <br />
+
+                        <asp:Button
+                            ID="btnDelete"
+                            runat="server"
+                            Text="Delete Skill"
+                            CssClass="btn btn-danger"
+                            OnClick="btnDelete_Click" />
+
+                        <a href="List.aspx"
+                           class="btn btn-default">
+
+                            Cancel
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
 
         </div>
 
-    </form>
+    </div>
 
-</body>
-
-</html>
+</asp:Content>

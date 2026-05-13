@@ -1,50 +1,82 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master"
-AutoEventWireup="true"
+﻿<%@ Page Language="C#" AutoEventWireup="true"
+MasterPageFile="~/Site.Master"
 CodeBehind="Create.aspx.cs"
 Inherits="EmployeeManagementSystem.Skills.Create" %>
 
-<asp:Content ID="Content1"
+<asp:Content
+    ID="Content1"
     ContentPlaceHolderID="MainContent"
     runat="server">
 
-    <h2>Add Skill</h2>
+    <div class="container">
 
-    <table>
+        <div class="row">
 
-        <tr>
-            <td>Skill Name</td>
+            <div class="col-md-6 col-md-offset-3">
 
-            <td>
-                <asp:TextBox
-                    ID="txtSkillName"
-                    runat="server">
-                </asp:TextBox>
-            </td>
-        </tr>
+                <div class="panel panel-info">
 
-        <tr>
-            <td colspan="2">
+                    <div class="panel-heading">
 
-                <asp:Button
-                    ID="btnSave"
-                    runat="server"
-                    Text="Save Skill"
-                    OnClick="btnSave_Click" />
+                        <h3 class="panel-title">
+                            Add Skill
+                        </h3>
 
-            </td>
-        </tr>
+                    </div>
 
-        <tr>
-            <td colspan="2">
+                    <div class="panel-body">
 
-                <asp:Label
-                    ID="lblMessage"
-                    runat="server">
-                </asp:Label>
+                        <div class="form-group">
 
-            </td>
-        </tr>
+                            <label>
+                                Skill Name
+                            </label>
 
-    </table>
+                            <asp:TextBox
+                                ID="txtSkillName"
+                                runat="server"
+                                CssClass="form-control"
+                                placeholder="Enter skill name">
+                            </asp:TextBox>
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <asp:Button
+                                ID="btnSave"
+                                runat="server"
+                                Text="Save Skill"
+                                CssClass="btn btn-info"
+                                OnClick="btnSave_Click" />
+
+                            <a href="List.aspx"
+                               class="btn btn-default">
+
+                                Back To List
+
+                            </a>
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <asp:Label
+                                ID="lblMessage"
+                                runat="server"
+                                CssClass="text-danger">
+                            </asp:Label>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </asp:Content>
