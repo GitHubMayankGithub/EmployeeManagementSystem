@@ -26,6 +26,13 @@ Inherits="EmployeeManagementSystem.Skills.Edit" %>
 
                     <div class="panel-body">
 
+                        <asp:ValidationSummary
+                            ID="vsSkill"
+                            runat="server"
+                            ForeColor="Red"
+                            HeaderText="Please fix the following errors:"
+                            CssClass="alert alert-danger" />
+
                         <div class="form-group">
 
                             <label>
@@ -38,6 +45,15 @@ Inherits="EmployeeManagementSystem.Skills.Edit" %>
                                 CssClass="form-control"
                                 placeholder="Enter skill name">
                             </asp:TextBox>
+
+                            <asp:RequiredFieldValidator
+                                ID="rfvSkillName"
+                                runat="server"
+                                ControlToValidate="txtSkillName"
+                                ErrorMessage="Skill Name is required"
+                                ForeColor="Red"
+                                Display="Dynamic">
+                            </asp:RequiredFieldValidator>
 
                         </div>
 

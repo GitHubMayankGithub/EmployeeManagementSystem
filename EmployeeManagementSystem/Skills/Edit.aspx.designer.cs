@@ -15,6 +15,15 @@ namespace EmployeeManagementSystem.Skills
     {
 
         /// <summary>
+        /// vsSkill control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ValidationSummary vsSkill;
+
+        /// <summary>
         /// txtSkillName control.
         /// </summary>
         /// <remarks>
@@ -22,6 +31,15 @@ namespace EmployeeManagementSystem.Skills
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtSkillName;
+
+        /// <summary>
+        /// rfvSkillName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvSkillName;
 
         /// <summary>
         /// btnUpdate control.
